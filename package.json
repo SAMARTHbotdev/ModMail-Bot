@@ -1,0 +1,19 @@
+{
+  "name": "Mod-Mail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {}
+  "keywords": [],
+  "author": "Roshan-Gamer-Dev",
+  "license": "ISC",
+  "homepage": "https://github.com/Roshan-Gamer/Mod-Mail#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "express": "^4.17.1"
+  }
+}
