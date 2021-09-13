@@ -9,8 +9,8 @@
 - In config.json Paste your server id.
 - click on run once you are done :0!
 
-#Server-Setup
+# ServerSetup
 - Create a role named as ModMail Staff and a Category named as ModMail and give the bot Admin Perms.
 
-#Making-it-24/7-on-replit
+# Making it 24/7 on Replit
 - copy the url shown above the console column and then create a monitor on uptime robot to make it online 24/7!
