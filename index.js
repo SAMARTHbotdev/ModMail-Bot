@@ -7,7 +7,7 @@ const config = require('./config.json');
 client.on("ready", () => {
 
     console.log("Bot online")
-    client.user.setActivity("My Dm's", { type: "WATCHING"})
+    client.user.setActivity("My Dm's | Coded by Technical Roshan Gaming", { type: "WATCHING"})
 })
 
 
@@ -20,7 +20,7 @@ client.on("channelDelete", (channel) => {
 
         let yembed = new discord.MessageEmbed()
             .setAuthor("MAIL DELETED", client.user.displayAvatarURL())
-            .setColor('RED')
+            .setColor('RED').setFooter('Made by Technical Roshan Gaming')
             .setDescription("Your mail was deleted by a staff member!")
         return person.send(yembed)
 
@@ -103,7 +103,7 @@ client.on("message", async message => {
                     .setAuthor("MAIL CLOSED", client.user.displayAvatarURL())
                     .setColor("RED")
                     .setThumbnail(client.user.displayAvatarURL())
-                    .setFooter("Mail is closed by " + message.author.username)
+                    .setFooter("Mail is closed by " + message.author.username | Made by Technical Roshan Gaming)
                 if (args[0]) yembed.setDescription(`Reason: ${args.join(" ")}`)
 
                 return person.send(yembed)
@@ -144,6 +144,7 @@ client.on("message", async message => {
                 .setThumbnail(target.user.displayAvatarURL({ dynamic: true }))
                 .setDescription(message.content)
                 .addField("Name", target.user.username)
+                .addField("Owner", "Coded by [Technical Roshan Gaming](https://youtube.com/channel/UCq0tvHwATofB5D3s2SgU4Tw)")
                 .addField("Account Creation Date", target.user.createdAt)
                 .addField("Direct Contact", "Yes(it means this mail is opened by a Staff)");
 
@@ -153,14 +154,16 @@ client.on("message", async message => {
                 .setAuthor("DIRECT MAIL OPENED")
                 .setColor("GREEN")
                 .setThumbnail(client.user.displayAvatarURL())
-                .setDescription("You have been contacted by Staff of **" + message.guild.name + "**, Please wait until he send another message to you!");
+                .setDescription("You have been contacted by Staff of **" + message.guild.name + "**, Please wait until he send another message to you!")
+.setFooter('Coded by Technical Roshan Gaming')
 
 
             target.send(uembed);
 
             let newEmbed = new discord.MessageEmbed()
                 .setDescription("Opened The Mail: <#" + channel + ">")
-                .setColor("GREEN");
+                .setColor("GREEN")
+.setFooter('Made By Technical Roshan Gaming')
 
             return message.channel.send(newEmbed);
         } else if (command == "help") {
@@ -168,6 +171,7 @@ client.on("message", async message => {
             let embed = new discord.MessageEmbed()
                 .setAuthor('MODMAIL BOT') 
                 .addField("$setup", "Setup the modmail system(This is not for multiple server.)", true)
+.addField("Owner", "Made by [Technical Roshan Gaming](https://youtube.com/channel/UCq0tvHwATofB5D3s2SgU4Tw)", true)
 
                 .addField("$open", 'Let you open the mail to contact anyone with his ID', true)
                 .setThumbnail(client.user.displayAvatarURL())
@@ -224,6 +228,7 @@ client.on("message", async message => {
                 .setColor("GREEN")
                 .setThumbnail(client.user.displayAvatarURL())
                 .setDescription("Conversation is now started, you will be contacted by staff soon")
+.setFooter('Bot code by Technical Roshan Gaming');
 
             message.author.send(sembed)
 
@@ -234,6 +239,7 @@ client.on("message", async message => {
                 .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
                 .setDescription(message.content)
                 .addField("Name", message.author.username)
+.addField("Owner", "Coded by [Technical Roshan Gaming](https://GitHub.com/Roshan-Gamer/ModMail-Bot)")
                 .addField("Account Creation Date", message.author.createdAt)
                 .addField("Direct Contact", "No(it means this mail is opened by person not a staff)")
 
@@ -245,6 +251,7 @@ client.on("message", async message => {
             .setColor("RED")
             .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
             .setDescription(message.content)
+.setFooter('Subscribe to Technical Roshan Gaming on YouTube')
 
 
         main.send(xembed)
