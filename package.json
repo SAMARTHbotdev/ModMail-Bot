@@ -1,15 +1,18 @@
 {
   "name": "Mod-Mail",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple ModMail bot for a server!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "repository": {}
+  "repository": {
+"type": "git", 
+"respiratory": "https://github.com/Roshan-Gamer/ModMail-Bot"
+}
   "keywords": [],
-  "author": "Roshan-Gamer-Dev",
+  "author": "Roshan-Gamer",
   "license": "ISC",
   "homepage": "https://github.com/Roshan-Gamer/Mod-Mail#readme",
   "dependencies": {
