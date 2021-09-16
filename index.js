@@ -53,7 +53,7 @@ client.on("message", async message => {
             }
 
 
-            let role = message.guild.roles.cache.find((x) => x.name == "Staff")
+            let role = message.guild.roles.cache.find((x) => x.name == "ModMail Staff")
             let everyone = message.guild.roles.cache.find((x) => x.name == "@everyone")
 
             if (!role) {
@@ -86,7 +86,7 @@ client.on("message", async message => {
 
         } else if (command == "close") {
             if (!message.content.startsWith(prefix)) return;
-            if (!message.member.roles.cache.find((x) => x.name == "Staff")) {
+            if (!message.member.roles.cache.find((x) => x.name == "ModMail Staff")) {
                 return message.channel.send("You need Staff role to use this command")
             }
             if (message.channel.parentID == message.guild.channels.cache.find((x) => x.name == "MODMAIL").id) {
@@ -117,8 +117,8 @@ client.on("message", async message => {
                 return message.channel.send("Moderation system is not setuped in this server, use " + prefix + "setup")
             }
 
-            if (!message.member.roles.cache.find((x) => x.name == "Staff")) {
-                return message.channel.send("You need `Staff` role to use this command")
+            if (!message.member.roles.cache.find((x) => x.name == "ModMail Staff")) {
+                return message.channel.send("You need `ModMail Staff` role to use this command")
             }
 
             if (isNaN(args[0]) || !args.length) {
@@ -239,7 +239,7 @@ client.on("message", async message => {
                 .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
                 .setDescription(message.content)
                 .addField("Name", message.author.username)
-.addField("Owner", "Coded by [Technical Roshan Gaming](https://GitHub.com/Roshan-Gamer/ModMail-Bot)")
+.addField("Owner", "Coded by [Technical Roshan Gaming](https://www.youtube.com/channel/UCq0tvHwATofB5D3s2SgU4Tw)")
                 .addField("Account Creation Date", message.author.createdAt)
                 .addField("Direct Contact", "No(it means this mail is opened by person not a staff)")
 
